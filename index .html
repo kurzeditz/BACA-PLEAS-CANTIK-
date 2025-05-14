@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Button with Sound</title>
+  <link rel="stylesheet" href="index.css"
+
+</head>
+<body>
+
+<button id="magicButton">PENCET CAANTIIIK!</button>
+<div id="message">Terima kasih telah mau pencet tombol ini. Aku berharap kita bisa terus mengenal satu sama lain, apa pun yang terjadi. Kamu adalah cahaya dalam hidupku, dan aku tak bisa berhenti untuk berharap bahwa kita bisa menjalani cerita ini bersama.</div>
+  <a href="index 2.html"> PENCET LAGI</a>
+  <audio id="audioPlayer" src="sempurna.mp3" preload="auto"></audio>
+
+<script>
+  const button = document.getElementById('magicButton');
+  const message = document.getElementById('message');
+  const audioPlayer = document.getElementById('audioPlayer');
+  
+  button.addEventListener('click', () => {
+    // Show text message
+    message.classList.add('show');
+
+    // Play the music
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
+  });
+</script>
+
+</body>
+</html>
+
